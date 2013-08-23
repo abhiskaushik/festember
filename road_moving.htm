@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Fest Road Moving</title>
+<script src="jquery-1.10.2.min.js"></script>
+</head>
+<body onload="move()">
+</br>
+<div id="abc">
+<div id="road" style="background:url(run.jpg);"></div>
+</div>
+<style>
+#abc
+{
+position:absolute;
+height: 150px;
+width: 100px;
+margin: 50px;
+padding:10px;
+top:0px;
+-webkit-perspective:250;
+}
+
+#road
+{
+padding:50px;
+position: absolute;
+left:300px;
+top:0px;
+height:450px;
+width:300px;
+background-color:red;
+
+-webkit-transform: rotateX(75deg); 
+}
+</style>
+<script>
+var k=10;var tr=10;
+function move(){
+k+=2;
+if(k%5==0){
+tr+=3;
+document.getElementById('road').style.backgroundPosition= 0+'px '+tr+'px';
+//document.getElementById('abc').style.left= tr+'px';
+
+}
+
+requestAnimationFrame(move);
+}
+requestAnimationFrame(move);
+
+$('#abc').animate({left:'300px',top:'200px'},10000).animate({left:'50px',top:'0px'},10000);
+
+</script>
+</body>
+</html>
