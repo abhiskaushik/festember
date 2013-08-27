@@ -1,0 +1,113 @@
+<html>
+<head>
+<div id='first' style='position:absolute;height:98%;width:98%;background:rgb(180,180,180);'>
+<div style='position:absolute;top:40%;left:40%'>
+<canvas id='loading_bar1' height="400px" width="500px"></canvas></div>
+<div style='position:absolute;top:40%;left:40%'>
+<canvas id='loading_bar' height="400px" width="500px"></canvas></div>
+<div style='position:absolute;top:75%;left:40%;font-size:35px;font-family:cursive;color:rgba(0,112,0,0.5);' id='loading_status' >Loading .</div>
+<div style='position:absolute;top:52%;left:45%;font-size:35px;font-family:cursive;color:rgba(0,112,0,0.5);' id='loading_status_in' >0%</div>
+</div>
+<script src='loading.js'></script>
+
+
+</head>
+<body onkeypress='key_Events(event)' bgcolor="black">
+<script>
+load();
+</script>
+<div id='level1' style='position:absolute;'>screen 1 content goes here</div>
+
+<div id="part2" style="opacity:0;height:98%;width:98%;position:absolute; overflow:hidden;">
+<audio id="samara" src="samara.mp3" controls loop ></audio>
+<img src="stack4.png" height=100% width=100% style="position:absolute;left:0px;top:0px">
+<img src="bat.gif" id='b1' style="position:absolute;left:1%;top:2%">
+<img src="bat.gif"style="position:absolute;left:8%;top:2%">
+<img src="bat.gif"style="position:absolute;left:16%;top:2%">
+<img src="bat.gif"style="position:absolute;left:70%;top:2%">
+<img src="bat.gif" id='b2' style="position:absolute;left:75%;top:2%">
+<img src="bat.gif"style="position:absolute;left:87%;top:12%">
+<img src="bat.gif"style="position:absolute;left:89%;top:14%">
+<img src="fire.gif" class="fire" style="display:none;position:absolute;top:49%;left:11%;height:55px;width:53px">
+<img src="fire.gif" class="fire" style="display:none;position:absolute;top:47%;left:21%;height:60px;width:60px">
+<img src="fire.gif" class="fire" style="display:none;position:absolute;top:45%;left:92%;height:60px;width:60px">
+<img src="gunstringer.jpg" id='gunstringer' style="display:none;position:absolute;top:47%;left:21%;height:30%;width:20%">
+<div style='position:absolute;top:45%;left:65%;opacity:0;color:red;font-size:100%;font-weight:800;font-family:courier;' id='syn'>Press X to open the letter</div>
+<div style='position:absolute;top:75%;left:0%;opacity:0;color:green;font-size:100%;font-weight:800;font-family:arial;' id='revenge'>Press W to start revenge</div>
+    <div id="letter" style="position:absolute;left:340px;top:50px;height:620px;width:800px;background:url(l6.jpg);z-index:3;font-family:Jokerman;font-size:30px;font-weight:bold;border-radius:1%;text-shadow:2px 2px green;padding-left:40px;opacity:0;"></div>
+  <div id="letter_src" style="position:absolute;left:34%;top:5%;display:none">
+	<h3 align="center" style="color:red;font-family:cursive;text-shadow:2% 2% rgb(231,123,12)">Story D'Zombies Attack!!</h3>
+	It was the 0'th day of <span style="color:yellow"> Festember'13...&nbsp </span>A fresher entered D' college,saw the premises completely destroyed by  zombies...
+	<span style="color:red">Zombie</span> made the fresher a skeleton Zombie marionette.Now the boy begins his journey of revenge aided only by his 
+	gritty resolve and trusty pistol...  He will track his betrayers</span> down, one by one, and bring justice upon</span> them... 
+   <span style="color:blue"> D' halloween is up!!</span> This <span style="color:yellow"> Festember,</span>
+   Nothing can stand in his way,nothing will stop him on the vengeance trail.
+    Zombie will be alive now!!! <img src="g3.jpg" style="height:7%;width:20%">
+    </div>
+<div id="Hanging_letter" style="background:rgba(256,256,256,0.5);height:4%;width:5%;top:30%;left:68%;position:absolute;z-Index:2;border-radius:10%;font-size:58%;text-align:center;color:red">Story D'Zombies Attack!!</div>
+
+</div>
+<style>
+#Hanging_letter{
+-webkit-transform:skew(10deg,10deg);
+-webkit-transform:rotate(45deg);
+-webkit-transform-origin:1% 2%;
+-webkit-animation:oscillation 4s ease-in-out alternate;
+-webkit-animation-iteration-count:3;}
+@-webkit-keyframes oscillation 
+{
+	from
+	{
+		-webkit-transform:rotate(-15deg);
+	}
+	to{
+		-webkit-transform:rotate(100deg);
+	}
+	}
+#div1
+{
+position: absolute;
+top:-100px;
+left:-100px;
+height: 150px;
+width: 150px;
+
+
+perspective:150;
+-webkit-perspective:140; /* Safari and Chrome */
+}
+
+#div2
+{
+position: absolute;
+
+background-color: red;
+transform: rotateX(45deg);
+-webkit-transform: rotateX(20deg); /* Safari and Chrome */
+
+}
+</style>
+
+
+<div style='position:absolute;height:98%;width:98%;overflow:hidden;opacity:0' id='part3'>
+<audio id="halo_theme" src="halloween_theme.mp3" controls loop ></audio>
+<audio src='gold.mp3' id='coin_music'></audio>
+<img src='sky.jpg' style='height:130%;width:100%;position:absolute;top:-15%;left:0%;'> 
+<div id="div1">
+  <img style='background:url("back8.png");width:1400%;height:400%;border-radius:0%;' id="div2"></img>
+</div>
+ <div id='main' style='position:absolute;width:100%;height:100%;'></div>
+ <img  id='zombie' style='position:absolute;top:60%;left:50%;-webkit-transform:rotate(-10deg);background:url("zombie2.png");width:140px;height:195px;'>
+  </div>
+
+
+
+
+
+</body>
+<script src="jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src='keyevent.js'></script>
+<script src='level3.js'></script>
+<script src='level2.js'></script>
+</html>
+
